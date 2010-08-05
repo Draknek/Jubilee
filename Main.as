@@ -9,7 +9,7 @@ package
 		{
 			super(640, 480, 60, true);
 			FP.screen.color = 0xFFFFFF;
-			FP.world = new Level();
+			FP.world = new Preloader("Level");
 		}
 	}
 }

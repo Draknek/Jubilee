@@ -24,7 +24,7 @@ package
 			
 			text.align = "center";
 			
-			text.x = 320 - text.width * 0.5;
+			text.x = (FP.width - text.width) * 0.5;
 		}
 
 		public override function update (): void
@@ -43,14 +43,16 @@ package
 		
 		public override function render (): void
 		{
+			FP.buffer.fillRect(FP.bounds, 0xFF000000);
+			
 			if (hasLoaded())
 			{
 				text.scale = 2;
 				
 				text.text = "Click to start";
 				
-				text.x = 320 - text.width * text.scale * 0.5;
-				text.y = 240 - text.height * text.scale * 0.5;
+				text.x = (FP.width - text.width) * 0.5;
+				text.y = (FP.height - text.height) * 0.5;
 			}
 			else
 			{
