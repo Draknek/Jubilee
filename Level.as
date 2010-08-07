@@ -40,7 +40,7 @@ package
 		
 		public function Level()
 		{
-			addGraphic(new Stamp(bgGfx), 0, -80, -60);
+			addGraphic(new Stamp(bgGfx), -80, -60);
 			
 			yearText = new Text("1994", 4, 4);
 			yearText.scrollX = yearText.scrollY = 0;
@@ -49,7 +49,7 @@ package
 			pietySprite.scrollX = pietySprite.scrollY = 0;
 			pietySprite.scale = 0.4;
 			
-			addGraphic(pietySprite, -5, 570, 440);
+			addGraphic(pietySprite, 570, 440, -5);
 			
 			addGraphic(yearText);
 			
